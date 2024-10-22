@@ -3,9 +3,14 @@
 
 #include <iostream>
 
+#include "battery.h"
+
 int main()
 {
-    std::cout << "Hello World!\n"; 
+    
+	test_battery();
+
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

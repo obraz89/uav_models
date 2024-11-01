@@ -152,10 +152,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="battery.cpp" />
+    <ClCompile Include="piston_engine.cpp" />
     <ClCompile Include="uav_models.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="battery.h" />
+    <ClInclude Include="piston_engine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

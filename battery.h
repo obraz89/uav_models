@@ -7,25 +7,26 @@ TODO: source article
 class Battery {
 protected:
 	// constant voltage from paper (V)
-	const double _E0;
+	double _E0;
 
-	// polarization Resistance (Ohm)
-	const double _KRes;
+	// internal resistance
+	double _RInt;
 
-	// polarization constant (V/(Ah))
-	const double _KPol;
-
-	// maximum battery capacity (Ah) 
-	const double _Qmax;
+	// polarization constant for modified model (V)
+	double _KPol_V;
 
 	// exponential voltage (V)
-	const double _AV;
+	double _AV;
 
-	// exponentail capacity (Ah)
-	const double _Bcap;
+	// exponentail capacity (A*s)
+	double _Bcap;
 
-	// current charge
-	double _charge;
+	// maximum battery capacity (A*s) 
+	double _Qmax;
+
+	// charge spent, positive if discharge
+	// charge = i*t if i=const
+	double _charge_spent;
 public:
 	Battery(double E0, double KRes, double KPol, double Qmax, double Av, double Bcap);
 	// calculate internal resistance
@@ -34,16 +35,16 @@ public:
 	// calc i star
 	double calc_I_star(double ibat) const;
 
-	// calculate current voltage of the battery - f1 function from paper
-	double calc_U_full(double it, double istar, double i);
+	// calculate current voltage of the battery
+	double calc_U_batt(double i);
 
 	// calculate current with given power of load (W)
 	double calc_I_bat(double load_power);
 
-	void get_current_charge_and_v(double& charge, double& v);
+	void get_current_charge_and_v(double i, double& charge, double& v);
 
 	void tick(double dt, double load_power);
 
 };
 
-extern void test_battery();
+extern void test_battery_LiIon();

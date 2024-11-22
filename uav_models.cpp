@@ -8,7 +8,7 @@
 int main()
 {
     
-	test_battery();
+	test_battery_LiIon();
 
 
 }

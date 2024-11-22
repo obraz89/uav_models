@@ -66,3 +66,9 @@ dmypy.json
 Federates/SOM_H/
 config.h
 JSON_Loader/
+
+# data files
+*.dat
+
+# origin files
+*.opj

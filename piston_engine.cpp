@@ -27,4 +27,13 @@ double PistonEngine::calc_power_func(double far) {
 	return 1.0;
 }
 
-double PistonEngine::calc_static_horse_power() {}
+// calc current power [W]
+double PistonEngine::calc_power() {
+	// power function coef, pf = 1 <=> no losses 
+	double pf = 0.8;
+	return pf * _max_power;
+}
+
+double PistonEngine::calc_thrust(double cur_power, double air_speed) {
+	return cur_power / air_speed;
+}

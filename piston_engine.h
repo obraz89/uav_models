@@ -19,11 +19,14 @@ protected:
 	double _fuel_remain;
 	// fuel consumption [kg/s] 
 	double _fuel_consum;
+	// max power of the engine (at sea level) [W]
+	double _max_power;
 public:
 	//PistonEngine();
 	double calc_manifold_pressure(double p_base);
-	double calc_static_horse_power();
+	double calc_power();
 	double calc_fuel_to_air_ratio();
 	double calc_power_func(double far);
 	double calc_power_func();
+	double calc_thrust(double cur_power, double air_speed);
 };

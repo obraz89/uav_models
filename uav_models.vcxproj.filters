@@ -24,12 +24,18 @@
     <ClCompile Include="piston_engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="atmosphere.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="battery.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="piston_engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="atmosphere.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

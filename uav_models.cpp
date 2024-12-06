@@ -4,11 +4,14 @@
 #include <iostream>
 
 #include "battery.h"
+#include "atmosphere.h"
 
 int main()
 {
     
 	test_battery_LiIon();
+
+	test_atmo_params();
 
 
 }

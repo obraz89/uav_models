@@ -69,6 +69,7 @@ JSON_Loader/
 
 # data files
 *.dat
+*.ini
 
 # origin files
 *.opj
